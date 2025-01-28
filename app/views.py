@@ -17,6 +17,7 @@ def ckumar(request):
     #         return render (request, 'index.html')
 
     if request.method == 'POST':
+        print('I am here')
         namev = request.POST['name']
         emailv = request.POST['email']
         mobilev= request.POST['mobile']
@@ -27,39 +28,20 @@ def ckumar(request):
         send_mail(
             'From the Google',
             f""" Hii {namev},
-your data is collected successfully""",
+                your data is collected successfully""",
             'settings.EMAIL_HOST_USER',
             [emailv],
             fail_silently=False
         ) 
 
         return render (request, 'index.html', {'success1':True})
-    
-    if request.method == 'POST':
-        first_namev = request.POST['first_name']
-        last_namev = request.POST['last_name']
-        emailv = request.POST['email']
-        phonev = request.POST['phone']
-        companyv = request.POST['company']
-        urlv = request.POST['url']
-        servicev = request.POST['service']
-        budgetv = request.POST['budget']
-        goalv = request.POST['goal']
-
-        CO = Contactform.objects.get_or_create( first_name = first_namev, last_name=last_namev , email=emailv, phone=phonev, company=companyv,url=urlv, service=servicev, budget=budgetv, goal=goalv)
-
-        return render (request, 'index.html', {'success':True})
-
 
 
     return render (request, 'index.html')
 
-    
 
 
-def display(request):
-    Ob = DetailInfo.objects.all()
-    return render(request,'display.html',{'OB':Ob})
+
 
 def service (request):
     return render (request, 'service.html')
@@ -71,6 +53,7 @@ def about(request):
 def contact(request):
 
     if request.method == 'POST':
+        print('url navigated and submitted')
         first_namev = request.POST['first_name']
         last_namev = request.POST['last_name']
         emailv = request.POST['email']

@@ -21,6 +21,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'templates')
 
 STATIC_DIR_CKUMAR = os.path.join(os.path.join(BASE_DIR,'ckumar'),'static')
 STATIC_DIR_APP = os.path.join(os.path.join(BASE_DIR,'app'),'static')
+STATIC_DIR_DASHBOARD = os.path.join(os.path.join(BASE_DIR,'dashboard'),'static')
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'dashboard',
 ]
 
 MIDDLEWARE = [
@@ -131,7 +133,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [STATIC_DIR_CKUMAR,STATIC_DIR_APP,]
+STATICFILES_DIRS = [STATIC_DIR_CKUMAR,STATIC_DIR_APP,STATIC_DIR_DASHBOARD,]
 
 
 import smtplib
