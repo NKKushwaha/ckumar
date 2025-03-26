@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Data - CKUMAR MEHTA</title>
+
+    <link rel="shortcut icon" href="{% static 'images/ckumar-mehta-logo.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'icons/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dstyle.css' %}">
+</head>
+
+<body>
+    <div class="container pt-4 pb-5">
+        <div class="row justify-content-center mt-5">
+            <div class="col">
+                <div class="card bg-hf text-white border border-4 rounded rounded-4 border-info m-4 p-2">
+                    <div class="card-body">
+                        <table class="table table-bordered border-primary">
+                            <tr class="table-success">
+                                <th>id</th>
+                                <th>name</th>
+                                <th>email</th>
+                                <th>mobile</th>
+                                <th>feedback</th>
+                            </tr>
+
+                            {% for i in OB %}
+
+                            <tr class="table-info">
+                                <td>{{i.id}}</td>
+                                <td>{{i.name}}</td>
+                                <td>{{i.email}}</td>
+                                <td>{{i.mobile}}</td>
+                                <td>{{i.feedback}}</td>
+                            </tr>
+
+                            {% endfor %}
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>

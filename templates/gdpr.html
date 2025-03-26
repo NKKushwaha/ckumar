@@ -1,0 +1,139 @@
+{% extends 'link.html' %}
+{% load static %}
+
+{% block title %}
+<title>GDPR - CKUMAR MEHTA</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-hf ">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'ckumar' %}">
+      <img src="{% static 'images/ckumar-mehta-logo.png' %}" alt="Profile Picture" width="75" height="75">
+      <div class="ms-2 text-white">
+        <strong>CKUMAR MEHTA</strong><br>
+        <small class="text-wrap">Google Ads Certified PPC Ads Specialist</small>
+      </div>
+    </a>
+    <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="bi bi-justify" style="color: white;"></i>
+    </button>
+    <div class="collapse navbar-collapse me-5 justify-content-end " id="navbarNavDropdown">
+      <ul class="navbar-nav ms-5   nav-underline justify-content-end ">
+        <li class="nav-item ">
+          <a class="nav-link text-white " href="{% url 'ckumar' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'service' %}">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb  -->
+
+<div class="container pt-4">
+  <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'ckumar' %}" class="nav-link">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">GDPR</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- section -->
+
+
+<div class="container lh-base mb-5">
+  <h1><strong>GDPR</strong></h1>
+  <p>At <strong>CKumar.in</strong>, we are committed to respecting your privacy and ensuring the security of your
+    personal data. Our practices adhere to the <strong>General Data Protection Regulation (GDPR)</strong>, ensuring
+    transparency and accountability in how we collect, use, and protect your information.</p>
+  <h3><strong>What is GDPR?</strong></h3>
+  <p>The GDPR is a European Union regulation designed to give individuals greater control over their personal data. It
+    applies to businesses that process the personal data of EU residents, regardless of where the business is based.</p>
+  <h3><strong>How We Comply with GDPR</strong></h3>
+  <p>We implement GDPR-compliant practices to protect your rights and ensure your data is handled responsibly. Here's
+    how:</p>
+  <ol>
+    <li>
+      <p><strong>Data Collection Transparency</strong></p>
+      <ul>
+        <li>We collect only the data necessary for providing our services, such as name, email address, and contact
+          details.</li>
+        <li>You are informed about why and how your data is collected.</li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Lawful Basis for Processing</strong></p>
+      <ul>
+        <li>Your data is processed only with your explicit consent, to fulfill a contract, or to comply with legal
+          obligations.</li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Your Rights Under GDPR</strong></p>
+      <ul>
+        <li><strong>Right to Access:</strong> You can request a copy of the data we hold about you.</li>
+        <li><strong>Right to Rectification:</strong> If your data is inaccurate, you can request corrections.</li>
+        <li><strong>Right to Erasure:</strong> You can request deletion of your data in certain circumstances.</li>
+        <li><strong>Right to Restrict Processing:</strong> You can limit how your data is used.</li>
+        <li><strong>Right to Data Portability:</strong> You can receive your data in a structured, machine-readable
+          format.</li>
+        <li><strong>Right to Object:</strong> You can object to your data being used for certain purposes, such as
+          marketing.</li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Secure Data Storage</strong></p>
+      <ul>
+        <li>Your data is stored securely using robust technical and organizational measures to prevent unauthorized
+          access or breaches.</li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Third-Party Data Sharing</strong></p>
+      <ul>
+        <li>We do not share your data with third parties without your consent, except when required for service delivery
+          or legal obligations.</li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Cookies and Tracking</strong></p>
+      <ul>
+        <li>We use cookies to enhance your browsing experience. You can manage your cookie preferences through your
+          browser settings.</li>
+      </ul>
+    </li>
+    <li>
+      <p><strong>Data Breach Notifications</strong></p>
+      <ul>
+        <li>In the unlikely event of a data breach, affected users will be notified promptly as per GDPR guidelines.
+        </li>
+      </ul>
+    </li>
+  </ol>
+  <h3><strong>How to Exercise Your Rights</strong></h3>
+  <p>If you wish to exercise any of your GDPR rights or have questions about our data practices, you can contact us at:
+  </p>
+  <p><i class="bi bi-envelope-fill"></i> Email: privacy@ckumar.in</p>
+  <h3><strong>Updates to This Statement</strong></h3>
+  <p>We may update this GDPR statement periodically to reflect changes in regulations or our practices. Please revisit
+    this page for the latest information.</p>
+  <p>Your trust is important to us. At <strong>CKumar.in</strong>, we are dedicated to maintaining the highest standards
+    of privacy and security. Thank you for your continued support!</p>
+</div>
+
+
+{% endblock %}

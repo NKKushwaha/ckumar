@@ -1,0 +1,138 @@
+{% extends 'link.html' %}
+{% load static %}
+
+{% block title %}
+<title>Privacy Policy - CKUMAR MEHTA</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-hf ">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'ckumar' %}">
+      <img src="{% static 'images/ckumar-mehta-logo.png' %}" alt="Profile Picture" width="75" height="75">
+      <div class="ms-2 text-white">
+        <strong>CKUMAR MEHTA</strong><br>
+        <small class="text-wrap">Google Ads Certified PPC Ads Specialist</small>
+      </div>
+    </a>
+    <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="bi bi-justify" style="color: white;"></i>
+    </button>
+    <div class="collapse navbar-collapse me-5 justify-content-end " id="navbarNavDropdown">
+      <ul class="navbar-nav ms-5   nav-underline justify-content-end ">
+        <li class="nav-item ">
+          <a class="nav-link text-white " href="{% url 'ckumar' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'service' %}">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb  -->
+
+<div class="container pt-4">
+  <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'ckumar' %}" class="nav-link">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- section -->
+
+
+<div class="container lh-base mb-5">
+  <h1><strong>Privacy Policy</strong></h1>
+  <p><b>Please read below the privacy policy of our online advertising consulting services before entering into a
+      business contract. Last Updated: July 30th, 2019.</b></p>
+  <p>Here are some important data privacy policy of our services with our clients. Acceptance of policy.</p>
+  <ul>
+    <li>
+      <p>We respect the privacy of visitors to our Web site. To protect online privacy, we have implemented the
+        following policy.</p>
+    </li>
+    <li>
+      <p><b>About the Information that We Collect </b>- Most of the data and information we collect through our Web site
+        is used only to contact our customer and provide our services to them. It is our policy to collect and store
+        only personal information that our clients knowingly provide and we don't share the same.</p>
+    </li>
+    <li>
+      <p><b>Data Security </b>- Any type of sensitive information collected from the users of this website is encrypted
+        and transmitted to us in a secured manner. At the same time, we also protect your information offline and do not
+        share it with a third party. Only concerned people who require the information to perform a particular job are
+        granted access rights to such data. The computers and servers where the data are stored are also kept in a
+        secure environment to ensure an enhanced data safety.</p>
+    </li>
+    <li>
+      <p>From Casual Web Site Visitors and General Users: We do not collect any personal information from users browsing
+        our Web site. When you use the public areas of our Web site you are doing so anonymously. We do collect
+        aggregate use information, such as the number of hits (visits) per page. We use aggregate data for internal and
+        marketing purposes, but we don’t collect any personally identifying information.</p>
+    </li>
+    <li>
+      <p>From Potential Customer: We collect basic Requirement and Contact information through our online update form.
+        This online update information will be used by us for referral/service purposes only.</p>
+    </li>
+    <li>
+      <p><b>Do we use cookies? </b>- Yes. Cookies are small files that a site or its service provider transfers to your
+        computer’s hard drive through your Web browser, if you allow, that enables the sites or service providers
+        systems to recognize your browser and capture and remember certain information. We use cookies to compile
+        aggregate data about site traffic and site interaction so that we can offer better site experiences and tools in
+        the future. We may contract with third-party service providers to assist us in better understanding our site
+        visitors. These service providers are not permitted to use the information collected on our behalf except to
+        help us conduct and improve our business.</p>
+    </li>
+    <li>
+      <p><b>Do we disclose the information we collect to outside parties?</b> - We do not sell, trade, or otherwise
+        transfer to outside parties your personally identifiable information. This does not include trusted third
+        parties who assist us in operating our website, conducting our business, or servicing you. We may also release
+        your information when we believe release is appropriate to comply with the law, enforce our site policies, or
+        protect ours or others rights, property, or safety.</p>
+    </li>
+    <li>
+      <p><b>Third party links</b> - In an attempt to provide you with increased value, we may include third party links
+        on our site. These linked sites have separate and independent privacy policies. We therefore have no
+        responsibility or liability for the content and activities of these linked sites. Nonetheless, we seek to
+        protect the integrity of our site and welcome any feedback about these linked sites (including if a specific
+        link does not work).</p>
+    </li>
+    <li>
+      <p>This privacy policy pertains to online use</p>
+    </li>
+    <li>
+      <p>This online privacy policy applies only to information collected through our website and not to information
+        collected offline.</p>
+    </li>
+    <li>
+      <p><b>Consent</b> - By using our site, you consent to our web site privacy policy.</p>
+    </li>
+    <li>
+      <p><b>Changes to our privacy policy</b> - If we decide to change our privacy policy, we will post those changes on
+        this page.</p>
+    </li>
+    <li>
+      <p><b>Complaint Procedure</b>- If you suspect that we have handled your personal information in a manner that
+        doesn’t comply with this privacy statement, please contact us by e-mailing an explanation to support@ckumar.in
+      </p>
+    </li>
+
+  </ul>
+
+</div>
+
+
+{% endblock %}

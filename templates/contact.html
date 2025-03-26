@@ -1,0 +1,265 @@
+{% extends 'link.html' %}
+{% load static %}
+
+{% block title %}
+<title>Contact us - CKUMAR MEHTA</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-hf ">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'ckumar' %}">
+      <img src="{% static 'images/ckumar-mehta-logo.png' %}" alt="Profile Picture" width="75" height="75">
+      <div class="ms-2 text-white">
+        <strong>CKUMAR MEHTA</strong><br>
+        <small class="text-wrap">Google Ads Certified PPC Ads Specialist</small>
+      </div>
+    </a>
+    <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="bi bi-justify" style="color: white;"></i>
+    </button>
+    <div class="collapse navbar-collapse me-5 justify-content-end " id="navbarNavDropdown">
+      <ul class="navbar-nav ms-5   nav-underline justify-content-end ">
+        <li class="nav-item ">
+          <a class="nav-link text-white " href="{% url 'ckumar' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'service' %}">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white active" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb  -->
+
+<div class="container pt-4">
+  <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'ckumar' %}" class="nav-link">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- section -->
+
+
+<div class="bg-dark ">
+  <div class="container-lg pt-5 pb-5">
+    <div class="row align-items-center  text-white">
+      <div class="col-2">
+        <p class="border border-white border-3 rounded m-auto"></p>
+      </div>
+      <div class="col-10">
+        <h1 class="fw-bolder">Get In Touch With Me...</h1>
+      </div>
+    </div>
+
+
+    <div class="row g-4 m-auto grid gap-4 text-white">
+      <div class=" col-lg-5 colboder p-3">
+        <h5 class="mb-4">GET IN TOUCH WITH ME AND I CAN HELP YOU TO BOOST YOUR BUSINESS BY 30 TO 40 FOLD!</h5>
+
+
+        <form method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name*" aria-label="First name"
+                name="first_name" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name*" aria-label="Last name" name="last_name"
+                required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email*" name="email" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="number" class="form-control" placeholder="Phone*" name="phone" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Company*" name="company" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Your Website url" name="url">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select" name="service" required>
+                <option selected disabled value="">Services interested In</option>
+                <option value="PPC Ads Search Engine Advertising">PPC Ads Search Engine Advertising</option>
+                <option value="Social Media Marketing/Advertising">Social Media Marketing/Advertising</option>
+                <option value="Landing Page Suggestion/Creation">Landing Page Suggestion/Creation</option>
+                <option value="Display Ads Advertising">Display Ads Advertising</option>
+                <option value="Video Ads Advertising">Video Ads Advertising</option>
+                <option value="Shopping Ads">Shopping Ads</option>
+                <option value="Remarketing">Remarketing</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select" name="budget" required>
+                <option selected disabled value="">Select Campaign Budget</option>
+                <option value="Less than 30000 INR/Month">Less than 30000 INR/Month</option>
+                <option value="Less than 100000 INR/Month">Less than 100000 INR/Month</option>
+                <option value="Less than 500000 INR/Month">Less than 500000 INR/Month</option>
+                <option value="Less than 1000000 INR/Month">Less than 1000000 INR/Month</option>
+                <option value="Greater than 1000000 INR/Month">Greater than 1000000 INR/Month</option>
+              </select>
+            </div>
+          </div>
+          <div class=" row mb-3">
+            <div class="col">
+              <textarea class="form-control" name="goal" placeholder="Write about your business goal"
+                required></textarea>
+            </div>
+          </div>
+          {% if success %}
+          <div>
+            <p>Data is submitted successfully</p>
+          </div>
+          {% endif %}
+          <div class=" d-flex justify-content-center mt-4 mb-4 ">
+            <button class="continue-application" type="submit">
+              <div>
+                <div class="pencil"></div>
+                <div class="folder">
+                  <div class="top">
+                    <svg viewBox="0 0 24 27">
+                      <path
+                        d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="paper"></div>
+                </div>
+              </div>
+              SCHEDULE YOUR APPOINTMENT
+            </button>
+          </div>
+        </form>
+      </div>
+
+
+
+      <div class="col-12 col-lg-6 colboder p-3">
+
+        <div class="row mt-2  text-white justify-content-center">
+          <div class="col-6">
+            <div class="row">
+              <div class="col-4">
+                <div class="d-flex justify-content-start m-auto">
+                  <h4 class="circle"><i class="bi bi-telephone-fill"></i></h4>
+                </div>
+              </div>
+              <div class="col-8 justify-content-start m-auto">
+                <div>
+                  <h5>Call Us</h5>
+                  <p>+91 9313512275</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="row">
+              <!-- Left Inner Column -->
+              <div class="col-4">
+                <div class="d-flex justify-content-center m-auto">
+                  <h4 class="circle"><i class="bi bi-envelope-fill"></i></h4>
+                </div>
+              </div>
+              <div class="col-8 justify-content-center m-auto">
+                <div>
+                  <h5>Email Us</h5>
+                  <p>contact@ckumar.in</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row mt-4  text-white">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-2">
+                <div class="d-flex justify-content-start ">
+                  <h4 class="circle"><i class="bi bi-geo-alt-fill"></i></h4>
+                </div>
+              </div>
+              <div class="col-10 justify-content-start m-auto">
+                <div>
+                  <h5>Address Delhi:</h5>
+                  <p>B-18-19, Indira Enclave, Neb Sarai, IGNOU Road, New Delhi, Delhi (National Capital Territory of
+                    Delhi), 110068 India.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4  text-white">
+          <div class="col-12">
+            <div class="row">
+              <div class="col-2">
+                <div class="d-flex justify-content-start ">
+                  <h4 class="circle"><i class="bi bi-geo-alt-fill"></i></h4>
+                </div>
+              </div>
+              <div class="col-10 justify-content-start m-auto">
+                <div>
+                  <h5>Address Jharkhand:</h5>
+                  <p>Kushwaha Bhawan, Near Nawada More, Nawada Rd, Bishunpur, Garhwa, Jharkhand 822114</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4 grid gap-4 text-white justify-content-center">
+          <div class="col-12 p-2">
+            <div class="row">
+              <div class="col px-4">
+                <div class="row">
+                  <div class="col-12 border border-white border-3  rounded rounded-3">
+                    <iframe style="width: 100%; height: 210px; margin-top: 5px;"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7011.349376205218!2d77.19826007500417!3d28.519433689208544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1e0dc80c2df%3A0x3869d90efbc76521!2sGlobal%20Info%20Edge%20-%20Website%20Designing%20%26%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2sus!4v1734417062945!5m2!1sen!2sus"
+                      allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

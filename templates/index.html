@@ -1,0 +1,701 @@
+{% extends 'link.html' %}
+{% load static %}
+
+{% block boody_containt %}
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-hf ">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'ckumar' %}">
+      <img src="{% static 'images/ckumar-mehta-logo.png' %}" alt="Profile Picture" width="75" height="75">
+      <div class="ms-2 text-white">
+        <strong>CKUMAR MEHTA</strong><br>
+        <small class="text-wrap">Google Ads Certified PPC Ads Specialist</small>
+      </div>
+    </a>
+    <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="bi bi-justify" style="color: white;"></i>
+    </button>
+    <div class="collapse navbar-collapse me-5 justify-content-end " id="navbarNavDropdown">
+      <ul class="navbar-nav ms-5   nav-underline justify-content-end ">
+        <li class="nav-item ">
+          <a class="nav-link text-white active" href="{% url 'ckumar' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'service' %}">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- Section-1 -->
+<div class="cover1">
+  <div class="text-white bg-dark" style="--bs-bg-opacity: .9;">
+    <div class="container-lg">
+      <div class="row g-4 pt-5 pb-5">
+        <div class="col-lg-8  p-5 text-justify lh-lg">
+          <h1 class="fw-bolder">Are You Suffering From?</h1>
+          <p class="text-wrap">Not getting Quality Calls/Leads - Very High CPC - Suspended Ads Account - No ROI</p>
+          <h2 class="text-wrap fw-bolder">I AM CKUMAR MEHTA- A GOOGLE ADS PPC SPECIALIST IN INDIA</h2>
+          <p class="text-wrap">I offer Search PPC Campaign Management Services for customers all across the world. I
+            have over 10+ years of experience, helping businesses to grow.</p>
+          <p class="text-wrap">
+            <strong>Offer for Startups And Established Businesses (USA, Canada, Australia & India).</strong>
+            Get your advertising campaigns streamlined for more leads, sales, and branding on the existing budgets.
+          </p>
+          <div class="d-grid justify-content-center mx-auto mt-5 ">
+            <a class="text-decoration-none text-white" href="tel:9313512275">
+              <button type="button" class="btn btn-success  border border-black border-3 rounded">
+                <h5>Call Now to Discuss</h5>
+                <h5>About Your Businesses Goal</h5>
+              </button>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="card bg-hf text-white border border-4 rounded rounded-4 border-info m-4 p-2">
+            <div class="card-body">
+              <h2>Get In Touch With Me!</h2>
+              <p><b>Fill out the form below</b></p>
+
+
+              <form action="" method="POST" class="mt-2">
+                {% csrf_token %}
+                <input class="form-control mt-2" type="text" placeholder="Full Name*" name="name" required>
+                <input type="email" name="email" class="form-control mt-2" id="exampleFormControlInput1"
+                  placeholder="Email Address*" required>
+                <input class="form-control mt-2" name="mobile" type="number" placeholder="Mobile Number*" required>
+                <textarea class="form-control mt-2 mb-3" name="feedback" rows="2"
+                  placeholder="Tell me what you need ...*" required></textarea>
+                {% if success1 %}
+                <div>
+                  <p>We will contact soon</p>
+                </div>
+                {% endif %}
+
+                <div class="d-flex justify-content-center mb-4">
+                  <button type="submit" class="send-button">
+                    <div class="svg-wrapper-1">
+                      <div class="svg-wrapper">
+                        <svg viewBox="0 0 24 24" width="24" height="24">
+                          <path fill="none" d="M0 0h24v24H0z"></path>
+                          <path fill="currentColor"
+                            d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z">
+                          </path>
+                        </svg>
+                      </div>
+                    </div>
+                    <span>Send Now</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Section-2 -->
+<div class="container-lg mt-5 mb-5">
+  <div class="row g-4">
+
+    <div class="col-lg-4">
+      <div class="card bg-pf text-dark p-2 m-3 cboder">
+        <div class="card-head p-3">
+          <h1 class="fw-bolder">ABOUT CKUMAR</h1>
+          <img class="img-fluid border border-0 rounded mt-2"
+            src="{% static 'images/ckumar-mehta-digital-marketing-specialist.jpg' %}" alt="">
+        </div>
+        <div class="card-body text-wrap lh-1">
+          <h6><strong>Public Name:</strong> Ckumar Mehta</h6>
+          <h6><strong>Full Name:</strong> Chandan Kumar Mehta</h6>
+          <h6><strong>Email Contact:</strong> contact@ckumar.in</h6>
+          <h6><strong>Phone Contact:</strong> +91-9313-51-2275</h6>
+          <h6><strong>Service:</strong> Search PPC Ads Specialist</h6>
+          <h6><strong>From Date:</strong> January 17, 2008</h6>
+          <h6><i class="bi bi-whatsapp"></i><strong> Whatsapp Chat:</strong> Chat Now</h6>
+          <h6><i class="bi bi-facebook"></i> facebook.com/onlineckumar</h6>
+          <h6><i class="bi bi-linkedin"></i> linkedin.com/in/ckumarmehta/</h6>
+          <h6><i class="bi bi-instagram"></i> Instagram.com/ckmehta/</h6>
+          <h6><i class="bi bi-file-person"></i> www.ckumar.in</h6>
+          <div class=" justify-content-center mt-4 mb-4 ">
+            <a class="text-decoration-none text-white" href="{% url 'about' %}">
+              <button type="button" class="btn btn-success  rounded">
+                <h5>Know More About Me...</h5>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class=" col-12 col-lg-8  p-5 text-justify lh-lg">
+      <div class="row align-items-center">
+        <div class="col-2 ">
+          <p class="border border-black border-3 rounded"></p>
+        </div>
+        <div class="col-10">
+          <h1 class="fw-bolder">Get to know Ckumar Mehta</h1>
+        </div>
+      </div>
+      <p class="text-lg">I am CKUMAR Mehta(Chandan Kumar). I am an expert in Google Ads and Social Media ads. I will
+        rank & put your brand on the 1st page of a search engine like google in 24 hours by paid advertisements that
+        show ads to millions of customers interested in your services and products. You will get new customer's
+        inquiries, leads, chats, phone calls & sales at the best possible ROI from the paid advertisement.</p>
+      <p class="text-lg">As a <b>Certified Google Adwords Specialist</b>, I have more than 10+ years of experience in
+        internet-based Digital Marketing & Advertising, especially in Search Engine Paid Ads Advertising. I can help you
+        to manage and optimize your Google Ads (formerly Adwords) account, Bing Ads Account, LinkedIn Ad Account &
+        Facebook Ads Account. I Offers <b>PPC Ads Management Services</b> in all states of India and all over the world
+        (preferably in English-speaking countries like the USA, Canada, Australia, United Kingdom, Ireland, Germany,
+        France, Italy, Netherlands, Singapore, Brazil, etc). I prefer to work with people or companies who have a budget
+        of a minimum of $30 per day to a maximum of $5000 per day. I have set up more than 315+ campaigns & all of them
+        are doing well. As a <b>PPC Ads Campaign Manager</b> for my clients, my best practice is to bring them traffic
+        at the lowest cost. You can speak to my customers concerning my work if needed.</p>
+
+      <h5><b>Get a 7 -Day Paid Trial Now. Anywhere From The World.</b></h5>
+
+      <p>I prefer to work with people who previously have an AdWords account & running them for more than 3+ months.
+        Probably people who are looking for <b>PPC Ads Management Service</b> second time for long terms. But I can set
+        up a new campaign from scratch for new google ads customers also.</p>
+
+      <p>Please remark that Google Ads and other PPC ads are not suitable for all types of businesses. It depends on
+        many factors related to your business. Kindly share your details to get a free business consultation. Contact me
+        through call/ What’s App or fill up the contact form below & I will contact you.</p>
+
+      <div class="d-grid justify-content-end mx-auto mt-5 ">
+        <a class="text-decoration-none text-white" href="{% url 'contact' %}">
+          <button type="button" class="btn btn-success rounded">
+            <h5>Start Your Free 7 Days Trial with Me</h5>
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Section-3 -->
+
+
+<div class="cover2">
+  <div class="text-black bg-white pt-5 pb-5 " style="--bs-bg-opacity: .9;">
+    <div class="container-lg">
+      <div class="text-center mb-5">
+        <h2>Services Offered by Ckumar Mehta</h2>
+      </div>
+      <!-- Product1 -->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static 'images/ckumar-Search-Marketing.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body  round p-4">
+              <h2 class="pb-2">Search Engine Marketing</h2>
+              <p class="pb-2">Keywords based search ads targeting the search network</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product2 -->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/ckumar-social-media-marketing.jpg' %}" alt=""
+              class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Social Media Marketing/Advertising</h2>
+              <p class="pb-2">The major social media platforms (at the moment) are Facebook, Instagram, Twitter,
+                LinkedIn, Pinterest, YouTube, and Snapchat</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product3 -->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/ckumar-Landing-Page.png' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Landing Page Suggestion/Creation</h2>
+              <p class="pb-1">We also offer Landing page suggestions to our clients as 80% result depends on the landing
+                page. We prefer to create landing pages on our own for our customers</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product4 -->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/Display-Ads.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Display Ads</h2>
+              <p class="pb-1 text-start">Consisting of millions of websites, advertisers can choose to display their
+                adverts in multiple formats to a range of audiences across the globe using a wide variety of targeting
+                methods. The Google Display Network accounts for 20% of AdWords traffic</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product5 -->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src=" {% static '/images/Ckumar-Video-ads.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Video Ads</h2>
+              <p class="pb-1 text-start">AdWords for video enables you to display video ads in the YouTube search
+                results or before, during, and after videos on YouTube and the GoogleDisplay Network</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product6-->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/ckumar-Shopping-Ads.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Shopping Ads</h2>
+              <p class="pb-1 text-start">Google Shopping, formerly Google Product Search, Google Products, and Froogle,
+                is a Google that allows users to search for products on online shopping websites and compare prices
+                between different vendors.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product7-->
+      <div class="row g-4 m-auto service-row">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/cKumar-remarketing.png' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body  round p-4">
+              <h2 class="pb-2">Remarketing</h2>
+              <p class="pb-2">Remarketing is a form of online advertising that enables sites to show targeted ads to
+                users who have already visited their site</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Section-4 -->
+
+<div class="container-lg mt-5 mb-5 ">
+  <div class="mb-5">
+    <h2 class="fw-bolder text-center">MY WORK PROCESS</h2>
+    <p>I start with understanding my client neet of business, then I do a brain storm counselling for finding the key
+      business points which reveals the most important action points. Then I start building ad campaign based on data
+      collected after your business research, for few days we do run test campaign to find the business profitable
+      keywords. Next ongoing process is optimizing the campaign along with landing pages based on recent campaign data
+      output. Finally we have a perfect campaign which we optimize further to make more accurate time to time and so on.
+    </p>
+  </div>
+
+  <div class="container text-white  mb-4">
+    <div class="row d-flex justify-content-center grid gap-4">
+      <div class="col-lg-5 bg-hf p-4  rounded-4  ">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-center m-auto">
+            <h1 class="circle"><i class="bi bi-search fw-bolder"></i></h1>
+          </div>
+          <div class="col-10">
+            <h3>Find Client Needs</h3>
+            <p>I first understand the need of the client and then only I move ahead. I analyze the website first and
+              suggest to you what kind of PPC Ads campaign could be best for your business.</p>
+          </div>
+        </div>
+      </div>
+      <div class=" col-12 col-lg-5 bg-hf p-4  rounded-4 ">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-center m-auto">
+            <h1 class="circle"><i class="bi bi-nut"></i></i></h1>
+          </div>
+          <div class="col-10">
+            <h3>Counselling</h3>
+            <p>This is a very important part of my work process. I do not believe in fake claims or promises. I first
+              counsel the client that in the first few months he won't get many results.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="container text-white ">
+    <div class="row d-flex justify-content-center grid gap-4">
+      <div class="col-lg-5 bg-hf p-4  rounded-4  ">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-center m-auto">
+            <h1 class="circle"><i class="bi bi-check2-all"></i></h1>
+          </div>
+          <div class="col-10">
+            <h3>Testing</h3>
+            <p>I often tell my clients not to start with a high budget immediately suggest them to first test their
+              website and see what happens. Google also offers free credit for new advertisers.</p>
+          </div>
+        </div>
+      </div>
+      <div class=" col-12 col-lg-5 bg-hf p-4  rounded-4 ">
+        <div class="row">
+          <div class="col-2 d-flex justify-content-center m-auto">
+            <h1 class="circle"><i class="bi bi-clock"></i></h1>
+          </div>
+          <div class="col-10">
+            <h3>Optimization</h3>
+            <p>I consider the landing page as a very important component for PPC Campaign success. My experience tells
+              me that 80% of campaign success depends on the landing page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Section-5 -->
+
+<div class="pt-5 pb-5 bg-hf">
+  <div class="container-lg text-white">
+    <div class="row g-4 m-auto grid gap-5">
+      <div class=" col-lg-7 mt-5 ">
+        <h1 class="mb-4">Why Hire a Google Adwords Specialist?</h1>
+        <p>1. Sets up your pay-per-click advertising campaigns on Google Search, Google Display Partners, and Google
+          Mobile Ads.</p>
+        <p> 2. Conducts keyword research to create a list of keyword phrases on which you will be bidding.</p>
+        <p> 3. Creates Adwords Ads that will run on Google Search, Google Display Partners sites (if desired), and on
+          mobile devices (if desired).</p>
+        <p> 4. Tests different ads, by creating different headlines and different ad copy.
+        <p> 5. I will manage Manages your bids. Can tell you what keywords were entered into Google Search, that
+          resulted in your ad being displayed.</p>
+        <p>6. Can tell you how many times visitors clicked on your ad, which ad was clicked on, and which keyword got
+          the ad displayed.</p>
+        <p>7. Works with you to create targeted landing pages for each of your Adwords Ad Groups.</p>
+        <p>8. Adwords campaigns should be carefully set up and carefully managed, to help you maximize the value of your
+          Adwords investment — and a Google Adwords Specialist can make the difference between a profitable campaign and
+          a disappointing waste of money.</p>
+        <div class="d-grid justify-content-start mx-auto mt-5 ">
+          <button type="button" class="btn btn-success rounded">
+            <h6>Start Your Free 7 Days Trial with my Google Adwords Specialist</h6>
+          </button>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4 ms-2 ">
+        <img src="{% static 'images/ckumar-mehta.jpg' %}" alt="" class="img-fluid pimg boder rounded"
+          style="height: 95%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Section-6 -->
+
+<div class="bg-dark ">
+  <div class="container-lg pt-5 pb-5">
+    <div class="row align-items-center  text-white">
+      <div class="col-2">
+        <p class="border border-white border-3 rounded m-auto"></p>
+      </div>
+      <div class="col-10">
+        <h1 class="fw-bolder">Get In Touch With Me...</h1>
+      </div>
+    </div>
+
+
+    <div class="row g-4 m-auto grid gap-4 text-white">
+      <div class=" col-lg-5 colboder p-3">
+        <h4 class="mb-4">GET IN TOUCH WITH ME AND I CAN HELP YOU TO BOOST YOUR BUSINESS BY 30 TO 40 FOLD!</h4>
+
+
+        <form method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="First name*" aria-label="First name"
+                name="first_name" required>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Last name*" aria-label="Last name" name="last_name"
+                required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="email" class="form-control" id="inputEmail3" placeholder="Email*" name="email" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="number" class="form-control" placeholder="Phone*" name="phone" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Company*" name="company" required>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" class="form-control" placeholder="Your Website url" name="url">
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select" name="service" required>
+                <option selected disabled value="">Services interested In</option>
+                <option value="PPC Ads Search Engine Advertising">PPC Ads Search Engine Advertising</option>
+                <option value="Social Media Marketing/Advertising">Social Media Marketing/Advertising</option>
+                <option value="Landing Page Suggestion/Creation">Landing Page Suggestion/Creation</option>
+                <option value="Display Ads Advertising">Display Ads Advertising</option>
+                <option value="Video Ads Advertising">Video Ads Advertising</option>
+                <option value="Shopping Ads">Shopping Ads</option>
+                <option value="Remarketing">Remarketing</option>
+              </select>
+            </div>
+          </div>
+          <div class="row mb-3">
+            <div class="col">
+              <select class="form-select" name="budget" required>
+                <option selected disabled value="">Select Campaign Budget</option>
+                <option value="Less than 30000 INR/Month">Less than 30000 INR/Month</option>
+                <option value="Less than 100000 INR/Month">Less than 100000 INR/Month</option>
+                <option value="Less than 500000 INR/Month">Less than 500000 INR/Month</option>
+                <option value="Less than 1000000 INR/Month">Less than 1000000 INR/Month</option>
+                <option value="Greater than 1000000 INR/Month">Greater than 1000000 INR/Month</option>
+              </select>
+            </div>
+          </div>
+          <div class=" row mb-3">
+            <div class="col">
+              <textarea class="form-control" name="goal" placeholder="Write about your business goal"
+                required></textarea>
+            </div>
+          </div>
+          {% if success %}
+          <div>
+            <p>Data is submitted successfully</p>
+          </div>
+          {% endif %}
+          <div class=" d-flex justify-content-center mt-4 mb-4 ">
+            <button class="continue-application" type="submit">
+              <div>
+                <div class="pencil"></div>
+                <div class="folder">
+                  <div class="top">
+                    <svg viewBox="0 0 24 27">
+                      <path
+                        d="M1,0 L23,0 C23.5522847,-1.01453063e-16 24,0.44771525 24,1 L24,8.17157288 C24,8.70200585 23.7892863,9.21071368 23.4142136,9.58578644 L20.5857864,12.4142136 C20.2107137,12.7892863 20,13.2979941 20,13.8284271 L20,26 C20,26.5522847 19.5522847,27 19,27 L1,27 C0.44771525,27 6.76353751e-17,26.5522847 0,26 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z">
+                      </path>
+                    </svg>
+                  </div>
+                  <div class="paper"></div>
+                </div>
+              </div>
+              SCHEDULE YOUR APPOINTMENT
+            </button>
+          </div>
+        </form>
+      </div>
+
+
+
+      <div class="col-12 col-lg-6">
+
+        <div class="row mt-0 grid gap-4 text-white justify-content-center">
+          <div class="col-md-5 colboder p-2">
+            <div class="row">
+              <div class="col-4">
+                <div class="d-flex justify-content-start m-auto">
+                  <h4 class="circle"><i class="bi bi-telephone-fill"></i></h4>
+                </div>
+              </div>
+              <div class="col-8 justify-content-start m-auto">
+                <div>
+                  <h5>Call Us</h5>
+                  <p>+91 9313512275</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 colboder p-2">
+            <div class="row">
+              <!-- Left Inner Column -->
+              <div class="col-4">
+                <div class="d-flex justify-content-center m-auto">
+                  <h4 class="circle"><i class="bi bi-envelope-fill"></i></h4>
+                </div>
+              </div>
+              <div class="col-8 justify-content-center m-auto">
+                <div>
+                  <h5>Email Us</h5>
+                  <p>contact@ckumar.in</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="row mt-4 grid gap-4 text-white justify-content-center">
+          <div class="col-md-5 colboder p-2">
+            <div class="row">
+              <div>
+                <div class="d-flex justify-content-start m-auto">
+                  <h4 class="circle"><i class="bi bi-geo-alt-fill"></i></h4>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Address Delhi:</h5>
+                  <p>B-18-19, Indira Enclave, Neb Sarai, IGNOU Road, New Delhi, Delhi (National Capital Territory of
+                    Delhi), 110068 India.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 colboder p-2">
+            <div class="row">
+              <div class="col px-4">
+                <div class="row">
+                  <div class="col-12 border border-white border-3  rounded rounded-3">
+                    <iframe style="width: 100%; height: 210px; margin-top: 5px;"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7011.349376205218!2d77.19826007500417!3d28.519433689208544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce1e0dc80c2df%3A0x3869d90efbc76521!2sGlobal%20Info%20Edge%20-%20Website%20Designing%20%26%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2sus!4v1734417062945!5m2!1sen!2sus"
+                      allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        <div class="row mt-4 grid gap-4 text-white justify-content-center">
+          <div class="col-md-5 colboder p-2">
+            <div class="row">
+              <div>
+                <div class="d-flex justify-content-start m-auto">
+                  <h4 class="circle"><i class="bi bi-geo-alt-fill"></i></h4>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h5>Address Jharkhand:</h5>
+                  <p>Kushwaha Bhawan, Near Nawada More, Nawada Rd, Bishunpur, Garhwa, Jharkhand 822114</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-5 colboder p-2">
+            <div class="row">
+              <div class="col px-4">
+                <div class="row">
+                  <div class="col-12 border border-white border-3  rounded rounded-3">
+                    <iframe style="width: 100%; height: 210px; margin-top: 5px;"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.3805467948673!2d83.7814551748581!3d24.158383272992328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398c0f97ed377d5b%3A0x17418ef2378bcb1a!2sGlobal%20Info%20Edge%20-%20Website%20Designing%20%26%20Digital%20Marketing%20Agency!5e0!3m2!1sen!2sus!4v1734417173083!5m2!1sen!2sus"
+                      loading="lazy"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock %}

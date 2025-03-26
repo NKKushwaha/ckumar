@@ -1,0 +1,226 @@
+{% extends 'link.html' %}
+{% load static %}
+
+{% block title %}
+<title>Services - CKUMAR MEHTA</title>
+{% endblock %}
+
+{% block boody_containt %}
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg bg-hf ">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="{% url 'ckumar' %}">
+      <img src="{% static 'images/ckumar-mehta-logo.png' %}" alt="Profile Picture" width="75" height="75">
+      <div class="ms-2 text-white">
+        <strong>CKUMAR MEHTA</strong><br>
+        <small class="text-wrap">Google Ads Certified PPC Ads Specialist</small>
+      </div>
+    </a>
+    <button class="navbar-toggler border border-white" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="bi bi-justify" style="color: white;"></i>
+    </button>
+    <div class="collapse navbar-collapse me-5 justify-content-end " id="navbarNavDropdown">
+      <ul class="navbar-nav ms-5   nav-underline justify-content-end ">
+        <li class="nav-item ">
+          <a class="nav-link text-white " href="{% url 'ckumar' %}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white active" href="{% url 'service' %}">SERVICES</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'about' %}">ABOUT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'contact' %}">CONTACT</a>
+        </li>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb  -->
+
+<div class="container pt-4">
+  <nav style="--bs-breadcrumb-divider: '>>';" aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="{% url 'ckumar' %}" class="nav-link">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Service</li>
+    </ol>
+  </nav>
+</div>
+
+<!-- section -->
+
+<div class="cover2">
+  <div class="text-black bg-white pt-5 pb-5 " style="--bs-bg-opacity: .9;">
+    <div class="container-lg">
+      <div class="text-center mb-5">
+        <h2>Services Offered by Ckumar Mehta</h2>
+      </div>
+      <!-- Product1 -->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static 'images/ckumar-Search-Marketing.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body  round p-4">
+              <h2 class="pb-2">Search Engine Marketing</h2>
+              <p class="pb-2">Keywords based search ads targeting the search network</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product2 -->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/ckumar-social-media-marketing.jpg' %}" alt=""
+              class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Social Media Marketing/Advertising</h2>
+              <p class="pb-2">The major social media platforms (at the moment) are Facebook, Instagram, Twitter,
+                LinkedIn, Pinterest, YouTube, and Snapchat</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product3 -->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/ckumar-Landing-Page.png' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Landing Page Suggestion/Creation</h2>
+              <p class="pb-1">We also offer Landing page suggestions to our clients as 80% result depends on the landing
+                page. We prefer to create landing pages on our own for our customers</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product4 -->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/Display-Ads.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Display Ads</h2>
+              <p class="pb-1 text-start">Consisting of millions of websites, advertisers can choose to display their
+                adverts in multiple formats to a range of audiences across the globe using a wide variety of targeting
+                methods. The Google Display Network accounts for 20% of AdWords traffic</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Product5 -->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src=" {% static '/images/Ckumar-Video-ads.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Video Ads</h2>
+              <p class="pb-1 text-start">AdWords for video enables you to display video ads in the YouTube search
+                results or before, during, and after videos on YouTube and the GoogleDisplay Network</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product6-->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/ckumar-Shopping-Ads.jpg' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body round p-4">
+              <h2 class="pb-2">Shopping Ads</h2>
+              <p class="pb-1 text-start">Google Shopping, formerly Google Product Search, Google Products, and Froogle,
+                is a Google that allows users to search for products on online shopping websites and compare prices
+                between different vendors.</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start ">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product7-->
+      <div class="row g-4 m-auto">
+        <div class="col-lg-3">
+          <div class="card p-1 m-auto round">
+            <img src="{% static '/images/cKumar-remarketing.png' %}" alt="" class="img-fluid pimg boder round">
+          </div>
+        </div>
+        <div class="col-12 col-lg-9 ">
+          <div class="card">
+            <div class="card-body  round p-4">
+              <h2 class="pb-2">Remarketing</h2>
+              <p class="pb-2">Remarketing is a form of online advertising that enables sites to show targeted ads to
+                users who have already visited their site</p>
+              <div class="d-grid gap-2 d-md-flex justify-content-md-start pb-3">
+                <button type="button" class="btn btn-success me-3">Rs 1000 - Rs 100000</button>
+                <button type="button" class="btn btn-danger">Make Pyment</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
