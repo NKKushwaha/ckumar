@@ -1,6 +1,6 @@
 Django==5.0.3
 pillow==10.2.0
 bootstrap4==0.1.0
-smtplib==0.1.0
+# smtplib==0.1.0
 os==0.1.0
 sys==0.1.0
